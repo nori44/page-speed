@@ -1,0 +1,52 @@
+@use "import";
+.highlight {
+  color: import.$secondary-color;
+}
+.smaller {
+  font-size: 0.66em;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-center--tb {
+  @include import.mq(tb-max) {
+    text-align: center;
+  }
+}
+body {
+  font-family: serif;
+}
+p {
+  line-height: 2;
+  margin-bottom: 1em;
+  &+ p {
+    margin-bottom: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+li {
+  line-height: 1.666;
+}
+
+//title
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  letter-spacing: 0.025em;
+}
+.title-lv1 {
+  font-size: 1.625rem;
+  @include import.mq(md-min) {
+    font-size: 2rem;
+  }
+}
+.title-lv2 {
+  font-size: 1.25rem;
+  @include import.mq(md-min) {
+    font-size: 1.5rem;
+  }
+}

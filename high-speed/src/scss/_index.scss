@@ -1,0 +1,115 @@
+@use "import";
+//index page
+.about__wrap-01 {
+  flex-direction: column-reverse;
+  margin-bottom: 4em;
+  @include import.mq(md-min) {
+    flex-direction: row-reverse;
+    margin-bottom: 6em;
+    gap: 3em;
+  }
+}
+.about__wrap-02 {
+  flex-direction: column-reverse;
+  margin-bottom: 5em;
+  @include import.mq(md-min) {
+    flex-direction: row;
+    margin-bottom: 8em;
+    gap: 3em;
+  }
+}
+.about__info {
+  @include import.mq(md-min) {
+    flex: 1 1 600px;
+  }
+}
+.about__title {
+  margin-block: .6667em;
+  @include import.mq(md-min) {
+    margin-block: 1em;
+  }
+}
+.bio__wrap {
+  flex-direction: column-reverse;
+  @include import.mq(tb-min) {
+    flex-direction: row;
+    gap: 3em;
+  }
+}
+.bio__title-01 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  @include import.mq(tb-min) {
+    margin-top: 5em;
+    margin-bottom: .6667em;
+    flex-direction: row;
+  }
+}
+.bio__title-02 {
+  margin-top: 1.5em;
+  margin-bottom: .6667em;
+  @include import.mq(tb-min) {
+    margin-top: 2.3334em;
+  }
+}
+.bio__text {
+  font-size: 14px;
+}
+.bio__list {
+  font-size: 14px;
+  li {
+    display: flex;
+    margin-block: 0.5em;
+  }
+  span {
+    flex: none;
+    margin-right: 2em;
+  }
+}
+.prof__wrap {
+  flex: none;
+  flex-direction: row;
+  max-width: 366px;
+  @include import.mq(tb-max) {
+    padding-left: 80px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.prof__box {
+  bottom: 32px;
+  left: 0;
+  @include import.mq(tb-min) {
+    top: 16px;
+    left: -180px;
+  }
+}
+.prof__title {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 2;
+  margin-bottom: 8px;
+  padding-inline: 8px;
+  background-color: import.$beige-color;
+  display: inline-block;
+  @include import.mq(tb-min) {
+    font-size: 14px;
+  }
+}
+.prof__name {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-inline: 8px;
+  background-color: import.$beige-color;
+  display: inline-block;
+  span {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  @include import.mq(tb-min) {
+    font-size: 1.625rem;
+    span {
+      font-size: 1rem;
+    }
+  }
+}

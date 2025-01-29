@@ -1,0 +1,72 @@
+@use "vars";
+$breakpoints: (
+  'xs-max': 'not all and (min-width: 350px)',
+  'ss-min': 'screen and (min-width: 400px)',
+  'ss-max': 'not all and (min-width: 400px)',
+  'sm-min': 'screen and (min-width: 544px)',
+  'sm-max': 'not all and (min-width: 544px)',
+  'tb-min': 'screen and (min-width: 768px)',
+  'tb-max': 'not all and (min-width: 768px)',
+  'md-min': 'screen and (min-width: 900px)',
+  'md-max': 'not all and (min-width: 900px)',
+  'lg-min': 'screen and (min-width: 1024px)',
+  'lg-max': 'not all and (min-width: 1024px)',
+  'xlg-min': 'screen and (min-width: 1170px)',
+  'xlg-max': 'not all and (min-width: 1170px)',
+  'xxlg-min': 'screen and (min-width: 1450px)',
+  'xxlg-max': 'not all and (min-width: 1450px)',
+);
+@mixin mq($breakpoint: md-min) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+/* for copy
+@include import.mq(md-min) {
+}
+*/
+
+@mixin margin-lr {
+margin-inline: auto;
+padding-left: 1em;
+padding-right: 1em;
+@include mq(md-min) {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+}
+@mixin w1280 {
+  max-width: 1200px;
+  @include margin-lr;
+}
+@mixin w960 {
+  max-width: 960px;
+  @include margin-lr;
+}
+@mixin w800 {
+  max-width: 800px;
+  @include margin-lr;
+}
+@mixin w500 {
+  max-width: 500px;
+  @include margin-lr;
+}
+  @mixin rounded {
+  border-radius: 12px;
+  @include mq(md-min) {
+    border-radius: 20px;
+  }
+}
+@mixin margin-auto {
+  margin-inline: auto;
+}
+@mixin title-lv1 {
+  font-size: 1rem;
+  font-weight: normal;
+  @include mq(sm-min) {
+    font-size: 1.125rem;
+  }
+  @include mq(md-min) {
+    font-size: 1.25rem;
+  }
+}

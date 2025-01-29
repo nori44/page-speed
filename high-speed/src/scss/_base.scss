@@ -1,0 +1,33 @@
+@use "import";
+html {
+  overflow-x: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  color: import.$font-color;
+}
+a {
+  color: import.$primary-color;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+ul,ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+iframe {
+  vertical-align: bottom;
+  width: 100%;
+}
+footer {
+  margin-top: 3em;
+  padding: 0.5em;
+}

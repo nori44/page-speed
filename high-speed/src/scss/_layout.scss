@@ -1,0 +1,18 @@
+@use "import";
+
+/* width */
+.wrap-1280 {
+  @include import.w1280;
+}
+.wrap-960 {
+  @include import.w960;
+}
+
+section {
+  position: relative;
+  margin-block: 1em;
+  @include import.mq(md-min) {
+    margin-block: 5em;
+    margin-top: 3em;
+  }
+}
