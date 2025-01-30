@@ -5,7 +5,7 @@
   "scripts": {
     "image": "node convertImages.mjs -i ./src/img -o ./dist/img -m -w -v -z -t",
     "start:server": "browser-sync start -s dist -w dist/*.html dist/css/*.css dist/js/*.js",
-    "html:plain": "cpx 'src/html/**/*.html' 'dist/'",
+    "html:plain": "cpx \"src/html/**/*.html\" \"dist/\"",
     "html": "npm-run-all html:*",
     "compile:css2cssprefix": "postcss dist/css/style.css -u autoprefixer -o dist/css/style.css",
     "compile:scss2css": "sass src/scss/style.scss:dist/css/style.css --style=compressed --source-map-urls=relative",
@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "sass": "^1.49.7",
+    "svgo": "^3.3.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   }
